@@ -66,12 +66,13 @@ void DeleteOne (int index, List L)
   {
     L -> Data[i] = L -> Data[i + 1];
   }
+  L -> last--;
   return;
 }
 
 void PrintList (List L)
 {
-  for (int i = 0; i < L -> last; i++)
+  for (int i = 0; i <= L -> last; i++)
   {
     printf("%d\n", L -> Data[i]);
   }
@@ -80,6 +81,11 @@ void PrintList (List L)
 int main() {
   List list = MakeEmpty();
   InsertOne(1, 0, list);
+  InsertOne(2, 0, list);
+  InsertOne(4, 0, list);
+  PrintList(list);
+  printf("删除");
+  DeleteOne(0, list);
   PrintList(list);
   return 0;
 }
