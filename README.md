@@ -1,1 +1,3 @@
-# Learn-C
+# Learning-DataStructure
+
+Practices to enhance my basics.
